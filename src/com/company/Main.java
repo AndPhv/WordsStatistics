@@ -29,5 +29,6 @@ public class Main {
             if (prevValue != null)
                 throw new IllegalStateException("Change the algorithm for this task");
         }
+        Map<String, Integer> result = new LinkedHashMap<>();
     }
 }
