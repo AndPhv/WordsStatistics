@@ -5,7 +5,7 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-	    String text = "Hello hello java Java world";
+        String text = "Hello hello java Java world hello";
         String[] words = text.split(" ");
         System.out.println(getStatisticMap(words));
     }
@@ -26,8 +26,9 @@ public class Main {
         Map<Integer, String> treeMap = new TreeMap<>();
         for (Map.Entry<String, Integer> entry : original.entrySet()) {
             String prevValue = treeMap.put(entry.getValue(), entry.getKey());
-            if (prevValue != null)
+            if (prevValue != null) {
                 throw new IllegalStateException("Change the algorithm for this task");
+            }
         }
         Map<String, Integer> result = new LinkedHashMap<>();
         for (Map.Entry<Integer, String> entry : treeMap.entrySet()) {
