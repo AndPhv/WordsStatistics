@@ -20,6 +20,9 @@ public class Main {
                 count += 1;
             wordsCountMap.put(w, count);
         }
+        return sort(Collections.unmodifiableMap(wordsCountMap));
+    }
+    private static Map<String, Integer> sort(Map<String, Integer> original) {
 
     }
 }
