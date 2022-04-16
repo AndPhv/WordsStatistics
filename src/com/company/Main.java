@@ -26,7 +26,12 @@ public class Main {
         Set<Map.Entry<String, Integer>> set = new TreeSet<>(new Comparator<Map.Entry<String, Integer>>() {
             @Override
             public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
-                return 0;
+                int result = o1.getValue() - o2.getValue();
+                if (result == 0) {
+                    return o1.getKey().compareTo(o2.getKey());
+                } else {
+                    return result;
+                }
             }
         });
 
