@@ -24,5 +24,10 @@ public class Main {
     }
     private static Map<String, Integer> sort(Map<String, Integer> original) {
         Map<Integer, String> treeMap = new TreeMap<>();
+        for (Map.Entry<String, Integer> entry : original.entrySet()) {
+            String prevValue = treeMap.put(entry.getValue(), entry.getKey());
+            if (prevValue != null)
+                throw new IllegalStateException("Change the algorithm for this task");
+        }
     }
 }
