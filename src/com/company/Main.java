@@ -11,7 +11,10 @@ public class Main {
     }
     private static Map<String, Integer> getStatisticMap(String[] words) {
         Map<String, Integer> wordsCountMap = new HashMap<String, Integer>();
+        for (String word : words) {
+            String w = word.toLowerCase();
 
+        }
 
     }
 }
