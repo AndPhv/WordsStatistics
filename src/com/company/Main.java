@@ -34,9 +34,10 @@ public class Main {
                 }
             }
         });
-
-        for (Map.Entry<Integer, String> entry : ) {
-            result.put(entry.getValue(), entry.getKey());
+        set.addAll(original.entrySet());
+        Map<String, Integer> result = new LinkedHashMap<>();
+        for (Map.Entry<String, Integer> entry : set) {
+            result.put(entry.getKey(), entry.getValue());
         }
         return Collections.unmodifiableMap(result);
     }
