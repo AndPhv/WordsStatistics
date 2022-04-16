@@ -30,5 +30,9 @@ public class Main {
                 throw new IllegalStateException("Change the algorithm for this task");
         }
         Map<String, Integer> result = new LinkedHashMap<>();
+        for (Map.Entry<Integer, String> entry : treeMap.entrySet()) {
+            result.put(entry.getValue(), entry.getKey());
+        }
+        return Collections.unmodifiableMap(result);
     }
 }
