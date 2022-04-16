@@ -13,7 +13,12 @@ public class Main {
         Map<String, Integer> wordsCountMap = new HashMap<String, Integer>();
         for (String word : words) {
             String w = word.toLowerCase();
-
+            Integer count = wordsCountMap.get(w);
+            if (count == null)
+                count = 1;
+            else
+                count += 1;
+            wordsCountMap.put(w, count);
         }
 
     }
