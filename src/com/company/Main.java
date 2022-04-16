@@ -10,6 +10,8 @@ public class Main {
         System.out.println(getStatisticMap(words));
     }
     private static Map<String, Integer> getStatisticMap(String[] words) {
+        Map<String, Integer> wordsCountMap = new HashMap<String, Integer>();
+
 
     }
 }
