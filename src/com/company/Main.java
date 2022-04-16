@@ -23,6 +23,6 @@ public class Main {
         return sort(Collections.unmodifiableMap(wordsCountMap));
     }
     private static Map<String, Integer> sort(Map<String, Integer> original) {
-
+        Map<Integer, String> treeMap = new TreeMap<>();
     }
 }
