@@ -23,15 +23,14 @@ public class Main {
         return sort(Collections.unmodifiableMap(wordsCountMap));
     }
     private static Map<String, Integer> sort(Map<String, Integer> original) {
-        Map<Integer, String> treeMap = new TreeMap<>();
-        for (Map.Entry<String, Integer> entry : original.entrySet()) {
-            String prevValue = treeMap.put(entry.getValue(), entry.getKey());
-            if (prevValue != null) {
-                throw new IllegalStateException("Change the algorithm for this task");
+        Set<Map.Entry<String, Integer>> set = new TreeSet<>(new Comparator<Map.Entry<String, Integer>>() {
+            @Override
+            public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
+                return 0;
             }
-        }
-        Map<String, Integer> result = new LinkedHashMap<>();
-        for (Map.Entry<Integer, String> entry : treeMap.entrySet()) {
+        });
+
+        for (Map.Entry<Integer, String> entry : ) {
             result.put(entry.getValue(), entry.getKey());
         }
         return Collections.unmodifiableMap(result);
